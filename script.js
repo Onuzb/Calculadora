@@ -14,7 +14,11 @@ function voltar(){
 function calcular() {
     const display = document.querySelector('#display');
     try {
-        display.value = eval(display.value).toFixed(2);
+        let resultado = eval(display.value).toFixed(3);
+        if (resultado.endsWith('.000')) {
+            resultado = resultado.replace('.000', '');
+        }
+        display.value = resultado;
     } catch {
         display.value = 'Erro';
     }
