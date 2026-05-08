@@ -19,6 +19,7 @@ function calcular() {
             resultado = resultado.replace('.000', '');
         }
         display.value = resultado;
+        
     } catch {
         display.value = 'Erro';
     }
